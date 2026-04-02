@@ -1,0 +1,48 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+env/
+venv/
+ENV/
+
+# ── Dataset — never commit raw images ────────────────────────────────────────
+data/raw/imgs/
+data/raw/*.zip
+data/raw/*.csv
+data/processed/
+
+# ── Model weights — too large for git, use Git LFS or Drive ──────────────────
+models/weights/*.pt
+models/weights/*.onnx
+models/weights/*.torchscript.pt
+models/weights/training_history.json
+# Keep the directory itself
+!models/weights/.gitkeep
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Testing / coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+*.log
