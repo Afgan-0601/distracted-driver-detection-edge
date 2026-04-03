@@ -86,12 +86,12 @@ class DriverClassifier(nn.Module):
 
     @classmethod
     def load(cls, path: Optional[Path] = None, **kwargs) -> "DriverClassifier":
-        """Load a saved state dict into a new model instance."""
+        """Load a saved state dict or trainer checkpoint into a new model instance."""
         load_path = Path(path or MODELS_DIR / PT_MODEL_NAME)
         model = cls(**kwargs)
-        model.load_state_dict(
-            torch.load(load_path, map_location="cpu", weights_only=True)
-        )
+        data = torch.load(load_path, map_location="cpu", weights_only=False)
+        state_dict = data["model_state"] if isinstance(data, dict) and "model_state" in data else data
+        model.load_state_dict(state_dict)
         model.eval()
         return model
 
@@ -100,6 +100,7 @@ class DriverClassifier(nn.Module):
         path: Optional[Path] = None,
         input_shape: tuple = (1, 3, 224, 224),
         opset: int = 17,
+        dynamo=False,
     ) -> Path:
         """
         Export to ONNX for cross-platform edge inference.
