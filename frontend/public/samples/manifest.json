@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "label": "Radio / dashboard controls",
+    "path": "/samples/img_1.jpg",
+    "thumbnail": "/samples/img_1.jpg"
+  },
+  {
+    "id": 2,
+    "label": "Phone call (right hand)",
+    "path": "/samples/img_2.jpg",
+    "thumbnail": "/samples/img_2.jpg"
+  },
+  {
+    "id": 3,
+    "label": "Phone call (left hand)",
+    "path": "/samples/img_3.jpg",
+    "thumbnail": "/samples/img_3.jpg"
+  },
+  {
+    "id": 4,
+    "label": "Drinking",
+    "path": "/samples/img_4.jpg",
+    "thumbnail": "/samples/img_4.jpg"
+  },
+  {
+    "id": 5,
+    "label": "Safe driving",
+    "path": "/samples/img_7.jpg",
+    "thumbnail": "/samples/img_7.jpg"
+  },
+  {
+    "id": 6,
+    "label": "Reaching behind",
+    "path": "/samples/img_30.jpg",
+    "thumbnail": "/samples/img_30.jpg"
+  },
+  {
+    "id": 7,
+    "label": "Hair / makeup",
+    "path": "/samples/img_43.jpg",
+    "thumbnail": "/samples/img_43.jpg"
+  },
+  {
+    "id": 8,
+    "label": "Texting (right hand)",
+    "path": "/samples/img_12.jpg",
+    "thumbnail": "/samples/img_12.jpg"
+  },
+  {
+    "id": 9,
+    "label": "Texting (left hand)",
+    "path": "/samples/img_7.jpg",
+    "thumbnail": "/samples/img_7.jpg"
+  },
+  {
+    "id": 10,
+    "label": "Talking to passenger",
+    "path": "/samples/img_44.jpg",
+    "thumbnail": "/samples/img_44.jpg"
+  }
+]

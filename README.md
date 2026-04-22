@@ -162,13 +162,20 @@ curl -X POST http://localhost:8000/api/v1/predict \
 ## Docker
 
 ```bash
-# Build and run
+# Frontend + backend dev stack
 docker compose -f deployment/docker-compose.yml up --build
 
 # Or directly
 docker build -t distracted-driver-api .
 docker run -p 8000:8000 -v ./models/weights:/app/models/weights distracted-driver-api
 ```
+
+The dev Compose stack exposes:
+
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:8000`
+
+The frontend talks to the backend through the Vite dev proxy, so no extra local `npm run dev` process is needed.
 
 ---
 
